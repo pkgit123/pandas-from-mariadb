@@ -34,5 +34,6 @@ def get_df_from_mariadb(db_dbname, str_table_name):
   return df
   
 # run the function, refresh connection
+mariadb_engine = create_engine(str_mariadb_con)
 mariadb_connection = mariadb_engine.connect()
 df_sample = get_df_from_mariadb(db_dbname='db_dbname', str_table_name='str_table_name')
